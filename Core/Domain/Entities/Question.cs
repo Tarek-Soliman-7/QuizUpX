@@ -1,27 +1,25 @@
-﻿using Shared.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using Domain.Entities;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
-namespace Domain.Entities
+public class Question
 {
-    public class Question
-    {
-        public Guid Id { get; set; } 
+    
+    public int id { get; set; }
 
-        [Required]
-        public Guid QuizId { get; set; }
-        public Quiz Quiz { get; set; } = new Quiz();
+    public int subjectId { get; set; }
 
-        [Required]
-        public QuestionType Type { get; set; } 
 
-        [Required]
-        public string Text { get; set; }=string.Empty;
+    public string title { get; set; } = string.Empty;
 
-        // For TF questions: store correct boolean (null for MCQ)
-        public bool? CorrectAnswerBool { get; set; }
+    public List<string> choices { get; set; } = new();
 
-        // Navigation
-        public ICollection<Option> Options { get; set; } = new List<Option>();
-        public ICollection<Answer> Answers { get; set; } = new List<Answer>();
-    }
+    public int correctIndex { get; set; }
+
+    public int mark { get; set; } = 1;
+
+    public bool questionType { get; set; } = false;
+
+    public Subject? Subject { get; set; }
+ 
 }

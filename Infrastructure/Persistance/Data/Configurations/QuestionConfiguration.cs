@@ -6,25 +6,33 @@ namespace Persistance.Data.Configurations
 {
     public class QuestionConfiguration : IEntityTypeConfiguration<Question>
     {
-        public void Configure(EntityTypeBuilder<Question> b)
+        public void Configure(EntityTypeBuilder<Question> builder)
         {
-            b.HasKey(x => x.Id);
+            builder.ToTable("Questions");
 
-            b.Property(x => x.Text)
-                .IsRequired();
+            builder.HasKey(q => q.id);
 
-            b.Property(x => x.Type)
-                .IsRequired();
+            builder.Property(q=>q.id).UseIdentityColumn();
 
-            b.HasMany(x => x.Options)
-             .WithOne(o => o.Question)
-             .HasForeignKey(o => o.QuestionId)
-             .OnDelete(DeleteBehavior.Cascade);
+            builder.Property(q => q.title)
+                .IsRequired()
+                .HasMaxLength(1000);
 
-            b.HasMany(x => x.Answers)
-             .WithOne(a => a.Question)
-             .HasForeignKey(a => a.QuestionId)
-             .OnDelete(DeleteBehavior.Restrict);
+            builder.Property(q => q.questionType)
+                   .IsRequired()
+                   .HasDefaultValue(false);
+
+            builder.Property(q => q.mark)
+                   .IsRequired()
+                   .HasDefaultValue(1);
+
+            builder.Property(q => q.correctIndex)
+                   .IsRequired()
+                   .HasDefaultValue(0);
+
+            builder.HasIndex(q => new { q.subjectId });
+
+         
         }
     }
 }

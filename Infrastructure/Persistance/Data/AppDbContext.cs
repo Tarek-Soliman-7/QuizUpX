@@ -13,19 +13,17 @@ namespace Persistance.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new QuizConfiguration());
+            //modelBuilder.ApplyConfiguration(new ChoiceConfiguration());
+            modelBuilder.ApplyConfiguration(new SubjectConfiguration());
             modelBuilder.ApplyConfiguration(new QuestionConfiguration());
-            modelBuilder.ApplyConfiguration(new OptionConfiguration());
-            modelBuilder.ApplyConfiguration(new AttemptConfiguration());
-            modelBuilder.ApplyConfiguration(new AnswerConfiguration());
+
+
+
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Quiz> Quizzes { get; set; }
+
         public DbSet<Question> Questions { get; set; }
-        public DbSet<Option> Options { get; set; }
-        public DbSet<Attempt> Attempts { get; set; }
-        public DbSet<Answer> Answers { get; set; }
+        //public DbSet<Choice> Choices { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
        
 
     }

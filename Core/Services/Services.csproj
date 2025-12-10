@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Global\" />
-    <Folder Include="Implementations\" />
     <Folder Include="MappingProfiles\" />
     <Folder Include="Specifications\" />
   </ItemGroup>

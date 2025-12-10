@@ -1,0 +1,2163 @@
+[
+  {
+    "subjectId": 1,
+    "title": "What does OOP stand for?",
+    "choices": [
+      "Object Oriented Programming",
+      "Objective Operation Program",
+      "Original Output Processing",
+      "Optional Open Program"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which principle hides internal details of a class?",
+    "choices": [
+      "Inheritance",
+      "Abstraction",
+      "Encapsulation",
+      "Polymorphism"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword is used for inheritance in C#?",
+    "choices": [
+      "extends",
+      "base",
+      "inherit",
+      "using"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword prevents a class from being inherited?",
+    "choices": [
+      "static",
+      "sealed",
+      "private",
+      "final"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword is used to access the parent class constructor?",
+    "choices": [
+      "this",
+      "base",
+      "parent",
+      "super"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which OOP feature allows many forms?",
+    "choices": [
+      "Encapsulation",
+      "Abstraction",
+      "Inheritance",
+      "Polymorphism"
+    ],
+    "correctIndex": 3,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which allows multiple methods with the same name but different parameters?",
+    "choices": [
+      "Overriding",
+      "Overloading",
+      "Inheritance",
+      "Interface"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword is used to override a base method?",
+    "choices": [
+      "override",
+      "virtual",
+      "new",
+      "sealed"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which type cannot be inherited?",
+    "choices": [
+      "Abstract class",
+      "Sealed class",
+      "Virtual class",
+      "Partial class"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "What is the base class of all .NET classes?",
+    "choices": [
+      "System.Base",
+      "System.Object",
+      "Root",
+      "Main"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword allows unimplemented methods?",
+    "choices": [
+      "interface",
+      "static",
+      "sealed",
+      "base"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which access modifier allows visibility only inside the class?",
+    "choices": [
+      "protected",
+      "internal",
+      "private",
+      "public"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword creates a constant variable?",
+    "choices": [
+      "readonly",
+      "const",
+      "static",
+      "sealed"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which of these supports multiple inheritance?",
+    "choices": [
+      "Classes",
+      "Structures",
+      "Interfaces",
+      "Enums"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which feature binds method call at runtime?",
+    "choices": [
+      "Static Binding",
+      "Dynamic Binding",
+      "Encapsulation",
+      "Overloading"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword identifies a method that can be overridden?",
+    "choices": [
+      "virtual",
+      "sealed",
+      "abstract",
+      "override"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which class type cannot be instantiated?",
+    "choices": [
+      "Static class",
+      "Abstract class",
+      "Partial class",
+      "Concrete class"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword allows the same method name in derived class?",
+    "choices": [
+      "new",
+      "this",
+      "base",
+      "override"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "What is method overriding?",
+    "choices": [
+      "Same method name, same parameter list",
+      "Same method name, different parameters",
+      "Different method name, same parameters",
+      "Multiple constructors"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "Which keyword calls the current class constructor?",
+    "choices": [
+      "this",
+      "base",
+      "new",
+      "super"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 1,
+    "title": "enum keyword groups constants under a name?",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "C# supports Object Oriented Programming.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "Encapsulation means hiding implementation details.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "An abstract class can be instantiated in C#.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "A sealed class can be inherited.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "Method overloading allows multiple methods with the same name but different parameters.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "Interfaces can provide method implementations in C#.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "Polymorphism allows objects to behave in different ways.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "The keyword 'base' is used to access members of the parent class.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "All classes in C# inherit from System.Object.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 1,
+    "title": "Private members of a class can be accessed outside the class.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "What does LAN stand for?",
+    "choices": [
+      "Large Area Network",
+      "Local Area Network",
+      "Long Area Network",
+      "Light Area Network"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which device forwards data packets between networks?",
+    "choices": [
+      "Switch",
+      "Router",
+      "Hub",
+      "Repeater"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol is used to browse websites?",
+    "choices": [
+      "FTP",
+      "SMTP",
+      "HTTP",
+      "SNMP"
+    ],
+    "correctIndex": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "What does IP stand for?",
+    "choices": [
+      "Internet Process",
+      "Internet Protocol",
+      "Internal Provider",
+      "Interconnected Protocol"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which layer of the OSI model is responsible for routing?",
+    "choices": [
+      "Network",
+      "Transport",
+      "Session",
+      "Data Link"
+    ],
+    "correctIndex": 0,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "What device connects multiple computers in the same network?",
+    "choices": [
+      "Router",
+      "Switch",
+      "Modem",
+      "Firewall"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol is used for sending emails?",
+    "choices": [
+      "SMTP",
+      "FTP",
+      "HTTP",
+      "POP3"
+    ],
+    "correctIndex": 0,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol is used to download emails from a server?",
+    "choices": [
+      "SMTP",
+      "POP3",
+      "HTTP",
+      "SNMP"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "What is the default port for HTTP?",
+    "choices": [
+      "443",
+      "21",
+      "80",
+      "22"
+    ],
+    "correctIndex": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which cable is commonly used for Ethernet networks?",
+    "choices": [
+      "Coaxial",
+      "Fiber optic",
+      "Twisted Pair",
+      "Serial"
+    ],
+    "correctIndex": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "A hub is more intelligent than a switch.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "IP addresses identify devices on a network.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "HTTPS is more secure than HTTP.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "A router works only inside a LAN.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "DNS translates domain names into IP addresses.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "MAC address is unique for each device.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "FTP is used to transfer files.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "The OSI model has 5 layers.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "Wi-Fi is a type of wireless networking.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "Firewalls help block malicious traffic.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "questionType": true
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol resolves IP to MAC addresses?",
+    "choices": [
+      "DNS",
+      "ARP",
+      "ICMP",
+      "DHCP"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol automatically assigns IP addresses?",
+    "choices": [
+      "ARP",
+      "DNS",
+      "ICMP",
+      "DHCP"
+    ],
+    "correctIndex": 3,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which OSI layer handles encryption?",
+    "choices": [
+      "Presentation",
+      "Session",
+      "Transport",
+      "Application"
+    ],
+    "correctIndex": 0,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which network topology uses a central device?",
+    "choices": [
+      "Bus",
+      "Star",
+      "Ring",
+      "Mesh"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "What does DNS stand for?",
+    "choices": [
+      "Domain Network Service",
+      "Dynamic Name System",
+      "Domain Name System",
+      "Digital Network Service"
+    ],
+    "correctIndex": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which command checks network connectivity?",
+    "choices": [
+      "ipconfig",
+      "ping",
+      "netstat",
+      "tracert"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which device protects a network from unauthorized access?",
+    "choices": [
+      "Router",
+      "Switch",
+      "Firewall",
+      "Hub"
+    ],
+    "correctIndex": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol is used for secure web browsing?",
+    "choices": [
+      "HTTP",
+      "HTTPS",
+      "FTP",
+      "TELNET"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "What is an example of a private IP range?",
+    "choices": [
+      "8.8.8.8",
+      "192.168.1.1",
+      "172.217.5.5",
+      "3.3.3.3"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 2,
+    "title": "Which protocol reports network errors?",
+    "choices": [
+      "ARP",
+      "ICMP",
+      "DNS",
+      "FTP"
+    ],
+    "correctIndex": 1,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "SQL Server is a relational database management system.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which statement is used to retrieve data in SQL Server?",
+    "choices": [
+      "INSERT",
+      "DELETE",
+      "SELECT",
+      "UPDATE"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "SQL Server was developed by Microsoft.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which constraint ensures that a column value is unique?",
+    "choices": [
+      "FOREIGN KEY",
+      "PRIMARY KEY",
+      "CHECK",
+      "DEFAULT"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "The INSERT statement is used to delete data.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which command is used to modify existing records?",
+    "choices": [
+      "SELECT",
+      "UPDATE",
+      "DELETE",
+      "ALTER"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "The DELETE statement removes rows from a table.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which JOIN returns all rows from the left table?",
+    "choices": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN",
+      "FULL JOIN"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "A primary key can contain duplicate values.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "What does NULL indicate?",
+    "choices": [
+      "Zero value",
+      "Empty string",
+      "Missing or unknown value",
+      "False"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "The WHERE clause filters query results.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which clause sorts query results?",
+    "choices": [
+      "FILTER BY",
+      "SORT BY",
+      "GROUP BY",
+      "ORDER BY"
+    ],
+    "correctIndex": 3,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "GROUP BY groups rows with the same values.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which clause filters grouped results?",
+    "choices": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "ORDER BY"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "The JOIN keyword combines rows from multiple tables.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which object is a virtual table?",
+    "choices": [
+      "View",
+      "Trigger",
+      "Index",
+      "Procedure"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "LEFT JOIN returns all records from the left table.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which feature improves query performance?",
+    "choices": [
+      "Index",
+      "Trigger",
+      "View",
+      "Constraint"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "A stored procedure is a saved set of SQL statements.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which event automatically runs a trigger?",
+    "choices": [
+      "INSERT, UPDATE, DELETE",
+      "SELECT",
+      "BACKUP",
+      "RESTORE"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "An index improves SELECT query performance.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which command finalizes a transaction?",
+    "choices": [
+      "SAVE",
+      "END",
+      "COMMIT",
+      "ROLLBACK"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "A transaction ensures data consistency.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which command cancels a transaction?",
+    "choices": [
+      "END",
+      "COMMIT",
+      "CANCEL",
+      "ROLLBACK"
+    ],
+    "correctIndex": 3,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "ROLLBACK cancels a transaction.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which authentication modes are supported by SQL Server?",
+    "choices": [
+      "Windows only",
+      "SQL only",
+      "Windows & SQL",
+      "OAuth"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "A NULL value is the same as zero.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which command creates a backup?",
+    "choices": [
+      "SAVE DATABASE",
+      "BACKUP DATABASE",
+      "EXPORT DB",
+      "STORE DB"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 3,
+    "title": "RESTORE DATABASE recovers a database from backup.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 3,
+    "title": "Which service schedules automated jobs in SQL Server?",
+    "choices": [
+      "SQL Server Browser",
+      "SQL Server Agent",
+      "Windows Task Scheduler",
+      "SSIS"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "An operating system acts as an interface between the user and hardware.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which of the following is an example of an operating system?",
+    "choices": [
+      "Windows",
+      "Google Chrome",
+      "MS Word",
+      "Photoshop"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "The kernel is the core part of an operating system.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which component manages process execution?",
+    "choices": [
+      "Memory Manager",
+      "File System",
+      "Process Scheduler",
+      "Device Driver"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "An operating system can manage memory.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which of the following is NOT an operating system?",
+    "choices": [
+      "Linux",
+      "macOS",
+      "Ubuntu",
+      "Oracle"
+    ],
+    "correctIndex": 3,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Multitasking means running multiple programs simultaneously.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which scheduling algorithm runs the shortest job first?",
+    "choices": [
+      "FCFS",
+      "Round Robin",
+      "SJF",
+      "Priority"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "The operating system controls hardware resources.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which memory type is volatile?",
+    "choices": [
+      "ROM",
+      "HDD",
+      "RAM",
+      "SSD"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Paging is a memory management technique.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which algorithm uses time slices?",
+    "choices": [
+      "FCFS",
+      "Round Robin",
+      "SJF",
+      "Priority"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Deadlock occurs when processes wait indefinitely for resources.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which concept allows the OS to divide memory into fixed-size blocks?",
+    "choices": [
+      "Segmentation",
+      "Paging",
+      "Swapping",
+      "Buffering"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Virtual memory allows programs to use more memory than physically available.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which scheduling algorithm processes tasks in arrival order?",
+    "choices": [
+      "FCFS",
+      "SJF",
+      "Priority",
+      "Round Robin"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Threads are smaller units of a process.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which component handles communication with hardware devices?",
+    "choices": [
+      "Kernel",
+      "Device Driver",
+      "File System",
+      "Scheduler"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "A context switch occurs when the CPU switches between processes.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which storage device is the fastest?",
+    "choices": [
+      "HDD",
+      "SSD",
+      "RAM",
+      "USB Flash"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "The operating system controls I/O devices.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which memory is permanent and non-volatile?",
+    "choices": [
+      "RAM",
+      "ROM",
+      "Cache",
+      "Registers"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Multithreading improves CPU utilization.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which command ends a process?",
+    "choices": [
+      "Kill",
+      "Stop",
+      "Pause",
+      "End"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "A semaphore is used for process synchronization.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which of the following prevents deadlock?",
+    "choices": [
+      "Resource preemption",
+      "Circular wait",
+      "Hold and wait",
+      "No preemption"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Starvation occurs when a process never gets CPU time.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which scheduling algorithm divides CPU time equally?",
+    "choices": [
+      "FCFS",
+      "Round Robin",
+      "SJF",
+      "Priority"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 4,
+    "title": "Spooling is used to manage I/O operations.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 4,
+    "title": "Which file system is commonly used in Windows?",
+    "choices": [
+      "EXT4",
+      "FAT32",
+      "NTFS",
+      "XFS"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter is an open-source UI toolkit.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which language is used for Flutter development?",
+    "choices": [
+      "Java",
+      "Kotlin",
+      "Dart",
+      "Swift"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Widgets are immutable.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget is used to display text?",
+    "choices": [
+      "Text",
+      "Label",
+      "TextView",
+      "String"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "StatelessWidget can change UI dynamically.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget rebuilds UI on state change?",
+    "choices": [
+      "StatelessWidget",
+      "InheritedWidget",
+      "StatefulWidget",
+      "StreamBuilder"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Hot Reload does not restart the entire application.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget places children horizontally?",
+    "choices": [
+      "Column",
+      "Row",
+      "Stack",
+      "GridView"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter apps run only on Android.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget allows scrolling?",
+    "choices": [
+      "ListView",
+      "Row",
+      "Wrap",
+      "Align"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "setState() updates the UI.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget overlays elements on each other?",
+    "choices": [
+      "Row",
+      "Column",
+      "Stack",
+      "Wrap"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter UI is built using XML.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget adds empty space?",
+    "choices": [
+      "Expanded",
+      "Container",
+      "SizedBox",
+      "Padding"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "BuildContext provides widget tree information.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget detects taps?",
+    "choices": [
+      "InkWell",
+      "GestureDetector",
+      "TouchWidget",
+      "ClickListener"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter can compile to native code.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget shows an image?",
+    "choices": [
+      "Image",
+      "PictureBox",
+      "ImageViewer",
+      "Photo"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "State is mutable in Flutter.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which file manages dependencies?",
+    "choices": [
+      "main.dart",
+      "pubspec.yaml",
+      "config.json",
+      "manifest.xml"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter supports animations.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget handles navigation?",
+    "choices": [
+      "Navigator",
+      "Router",
+      "PageManager",
+      "GoRoute"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "MediaQuery reads screen size info.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget prevents UI from overlapping system areas?",
+    "choices": [
+      "SafeArea",
+      "Align",
+      "Padding",
+      "Container"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter uses Skia rendering engine.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget expands to fill remaining space?",
+    "choices": [
+      "Expanded",
+      "Container",
+      "Align",
+      "SizedBox"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter apps cannot run on the web.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which widget displays a scrollable grid?",
+    "choices": [
+      "GridView",
+      "ListView",
+      "Row",
+      "Stack"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 5,
+    "title": "Flutter supports both Material and Cupertino designs.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 5,
+    "title": "Which command creates a Flutter project?",
+    "choices": [
+      "flutter create",
+      "flutter init",
+      "flutter make",
+      "flutter start"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "An algorithm is a step-by-step solution to a problem.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which notation measures algorithm efficiency?",
+    "choices": [
+      "Big O",
+      "SQL",
+      "HTML",
+      "CSS"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Time complexity is independent of input size.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which sorting algorithm is the fastest on average?",
+    "choices": [
+      "Bubble Sort",
+      "Selection Sort",
+      "Quick Sort",
+      "Insertion Sort"
+    ],
+    "correctIndex": 2,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Binary search works only on sorted data.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which sorting algorithm compares adjacent elements repeatedly?",
+    "choices": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Quick Sort",
+      "Heap Sort"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Linear search is better than binary search for large sorted lists.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm uses divide and conquer?",
+    "choices": [
+      "Bubble Sort",
+      "Merge Sort",
+      "Linear Search",
+      "Selection Sort"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "The worst-case time complexity of binary search is O(log n).",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which data structure is best for implementing BFS?",
+    "choices": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Array"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "DFS uses a stack data structure.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm finds the shortest path?",
+    "choices": [
+      "Dijkstra",
+      "Bubble Sort",
+      "DFS",
+      "Binary Search"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Recursion always requires more memory than iteration.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm divides the problem into smaller sub-problems?",
+    "choices": [
+      "Dynamic Programming",
+      "Greedy",
+      "Brute Force",
+      "Linear Search"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Greedy algorithms always provide the optimal solution.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which sorting algorithm has O(n log n) complexity?",
+    "choices": [
+      "Merge Sort",
+      "Bubble Sort",
+      "Selection Sort",
+      "Insertion Sort"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "A stable sort preserves the order of equal elements.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which data structure is used in recursion?",
+    "choices": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Graph"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Backtracking tries all possible solutions.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm is used in finding Minimum Spanning Tree?",
+    "choices": [
+      "Kruskal",
+      "Dijkstra",
+      "BFS",
+      "DFS"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "The space complexity measures memory usage.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which of the following algorithms uses recursion heavily?",
+    "choices": [
+      "Quick Sort",
+      "Bubble Sort",
+      "Insertion Sort",
+      "Counting Sort"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Linear search has O(n) time complexity.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which data structure supports LIFO?",
+    "choices": [
+      "Queue",
+      "Stack",
+      "Linked List",
+      "Tree"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Dynamic programming avoids repeated calculations.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm sorts by selecting smallest elements first?",
+    "choices": [
+      "Selection Sort",
+      "Bubble Sort",
+      "Merge Sort",
+      "Quick Sort"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Heap sort uses a heap data structure.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which traversal uses a queue?",
+    "choices": [
+      "DFS",
+      "BFS",
+      "Inorder",
+      "Postorder"
+    ],
+    "correctIndex": 1,
+    "mark": 2,
+    "questionType": false
+  },
+  {
+    "subjectId": 6,
+    "title": "Big O notation measures performance in terms of growth.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": true
+  },
+  {
+    "subjectId": 6,
+    "title": "Which algorithm is best for small datasets?",
+    "choices": [
+      "Insertion Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Radix Sort"
+    ],
+    "correctIndex": 0,
+    "mark": 2,
+    "questionType": false
+  }
+]

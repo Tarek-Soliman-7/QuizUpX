@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Object Oriented Programming",
+    "description": "C# OOP concepts including inheritance, polymorphism, abstraction, and encapsulation."
+  },
+  {
+    "id": 2,
+    "name": "Computer Networks",
+    "description": "Covers networking basics: protocols, OSI model, routing, switching, IP addressing."
+  },
+  {
+    "id": 3,
+    "name": "Database Systems",
+    "description": "Introduction to SQL, relational models, normalization, and transactions."
+  },
+  {
+    "id": 4,
+    "name": "Data Structures",
+    "description": "Arrays, linked lists, stacks, queues, trees, graphs, and algorithm analysis."
+  },
+  {
+    "id": 5,
+    "name": "Operating Systems",
+    "description": "Processes, threads, scheduling, memory management, and system calls."
+  },
+  {
+    "id": 6,
+    "name": "Flutter",
+    "description": "Flutter framework basics: widgets, state management, navigation, HTTP and JSON integration."
+  }
+]

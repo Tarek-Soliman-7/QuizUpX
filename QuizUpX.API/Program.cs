@@ -3,6 +3,7 @@ using Persistance.Data;
 using Domain.Contracts;
 using Presistence.Data;
 using QuizUpX.API.Extentions;
+using Microsoft.AspNetCore.Identity;
 
 namespace QuizUpX.API
 {
@@ -31,13 +32,14 @@ namespace QuizUpX.API
             // 3) Register Data Seeding
             // ---------------------------------------------------------
             builder.Services.AddScoped<IDataSeeding, DataSeeding>();
-
+            builder.Services.AddSingleton<IPasswordHasher<string>, PasswordHasher<string>>();
             // ---------------------------------------------------------
             // 4) Add framework services
             // ---------------------------------------------------------
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+           
 
             var app = builder.Build();
 
@@ -59,6 +61,11 @@ namespace QuizUpX.API
                     logger.LogError(ex, "An error occurred while seeding the database.");
                 }
             }
+          
+
+ 
+
+            app.UseCors("AllowAll");
 
             // ---------------------------------------------------------
             // 6) Configure HTTP Pipeline

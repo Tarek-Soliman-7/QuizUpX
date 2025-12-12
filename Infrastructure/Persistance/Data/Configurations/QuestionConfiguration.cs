@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Persistance.Data.Configurations
 {
@@ -32,7 +33,18 @@ namespace Persistance.Data.Configurations
 
             builder.HasIndex(q => new { q.subjectId });
 
-         
+            var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
+            builder.Property(q => q.choices)
+                   .HasConversion(
+                       v => JsonSerializer.Serialize(v, jsonOptions),
+                       v => string.IsNullOrWhiteSpace(v)
+                            ? new List<string>()
+                            : JsonSerializer.Deserialize<List<string>>(v, jsonOptions) ?? new List<string>()
+                   )
+                   .HasColumnType("nvarchar(max)");
+
+
         }
     }
 }

@@ -9,6 +9,8 @@ namespace Persistance.UnitOfWork
         private readonly AppDbContext _context;
         private SubjectRepository? _subjectRepository;
         private QuestionRepository? _questionRepository;
+        private AttemptRepository? _attemptRepository;
+        private StudentRepository? _studentRepository;
 
 
         public UnitOfWork(AppDbContext context)
@@ -20,6 +22,9 @@ namespace Persistance.UnitOfWork
         public ISubjectRepository Subjects => _subjectRepository ??= new SubjectRepository(_context);
         public IQuestionRepository Questions => _questionRepository ??= new QuestionRepository(_context);
 
+        public IAttemptRepository Attempts => _attemptRepository ??= new AttemptRepository(_context);
+
+        public IStudentRepository Students => _studentRepository ??= new StudentRepository(_context);
 
         public Task<int> CommitAsync() => _context.SaveChangesAsync();
     }

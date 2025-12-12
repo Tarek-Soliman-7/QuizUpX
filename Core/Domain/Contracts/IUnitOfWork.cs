@@ -7,6 +7,8 @@ namespace Domain.Contracts
     {
         ISubjectRepository Subjects { get; }
         IQuestionRepository Questions { get; }
+        IAttemptRepository Attempts { get; }
+        IStudentRepository Students { get; }
         Task<int> CommitAsync();
     }
 }

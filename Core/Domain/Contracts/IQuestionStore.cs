@@ -1,4 +1,6 @@
-﻿namespace Domain.Contracts
+﻿using Domain.Entities;
+
+namespace Domain.Contracts
 {
     public interface IQuestionStore
     {

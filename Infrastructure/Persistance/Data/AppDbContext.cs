@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Entities.IdentityModule;
 using Microsoft.EntityFrameworkCore;
 using Persistance.Data.Configurations;
 
@@ -16,15 +17,17 @@ namespace Persistance.Data
             //modelBuilder.ApplyConfiguration(new ChoiceConfiguration());
             modelBuilder.ApplyConfiguration(new SubjectConfiguration());
             modelBuilder.ApplyConfiguration(new QuestionConfiguration());
+            modelBuilder.ApplyConfiguration(new AttemptConfiguration());
+            modelBuilder.ApplyConfiguration(new StudentConfiguration());
 
 
 
         }
 
         public DbSet<Question> Questions { get; set; }
-        //public DbSet<Choice> Choices { get; set; }
+        public DbSet<Attempt> Attempts { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-       
-
+        public DbSet<Student> Students { get; set; }
+        
     }
 }

@@ -22,6 +22,7 @@ namespace Domain.Entities
 
         // navigation
         public Subject? Subject { get; set; }
+        public ICollection<AttemptAnswer> Answers { get; set; }
         // public ApplicationUser? User { get; set; } // if identity
     }
 

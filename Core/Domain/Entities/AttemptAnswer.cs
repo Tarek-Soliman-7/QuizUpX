@@ -9,15 +9,12 @@ namespace Domain.Entities
     public class AttemptAnswer
     {
         public int Id { get; set; }
-
         public int AttemptId { get; set; }
-        public Attempt Attempt { get; set; }
-
         public int QuestionId { get; set; }
-        public Question Question { get; set; }
-
-        public int SelectedAnswer { get; set; } // index or option number
-
+        public int SelectedIndex { get; set; }
         public bool IsCorrect { get; set; }
+        
+        public Attempt Attempt { get; set; } = null!;
+        public Question Question { get; set; } = null!;
     }
 }

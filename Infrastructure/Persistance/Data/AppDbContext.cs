@@ -28,6 +28,7 @@ namespace Persistance.Data
         public DbSet<Attempt> Attempts { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Student> Students { get; set; }
-        
+        public DbSet<AttemptAnswer> AttemptAnswers { get; set; }
+
     }
 }

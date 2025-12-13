@@ -1,86 +1,92 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Persistance.Data;
+using Persistance.Repositories;
+using Persistance.UnitOfWork;
 using Domain.Contracts;
-using Presistence.Data;
-using QuizUpX.API.Extentions;
-using Microsoft.AspNetCore.Identity;
+using Services.Abstraction.Contracts;
+using Services.Implementations;
 
-namespace QuizUpX.API
+var builder = WebApplication.CreateBuilder(args);
+
+#region Add services
+
+// Controllers
+builder.Services.AddControllers();
+
+// Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
+
+// =======================
+// Dependency Injection
+// =======================
+
+// Repositories
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+builder.Services.AddScoped<IAttemptRepository, AttemptRepository>();
+builder.Services.AddScoped<IAttemptAnswerRepository, AttemptAnswerRepository>();
+
+// Unit Of Work
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Services
+builder.Services.AddScoped<IQuizService, QuizService>();
+
+builder.Services.AddScoped<IDataSeeding, DataSeeding>();
+
+
+// CORS (Flutter)
+builder.Services.AddCors(options =>
 {
-    public class Program
+    options.AddPolicy("AllowFlutter", policy =>
     {
-        public static async Task Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
-            // ---------------------------------------------------------
-            // 1) Register DbContext
-            // ---------------------------------------------------------
-            builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("DefaultConnection")
-                )
-            );
+#endregion
 
-            // ---------------------------------------------------------
-            // 2) Register Application Services (Repositories + Services)
-            //    This comes from your ServiceCollectionExtensions class
-            // ---------------------------------------------------------
-            builder.Services.AddApplicationServices();
+var app = builder.Build();
 
-            // ---------------------------------------------------------
-            // 3) Register Data Seeding
-            // ---------------------------------------------------------
-            builder.Services.AddScoped<IDataSeeding, DataSeeding>();
-            builder.Services.AddSingleton<IPasswordHasher<string>, PasswordHasher<string>>();
-            // ---------------------------------------------------------
-            // 4) Add framework services
-            // ---------------------------------------------------------
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-           
 
-            var app = builder.Build();
-
-            // ---------------------------------------------------------
-            // 5) Run Data Seeding INSIDE a scope
-            // ---------------------------------------------------------
-            using (var scope = app.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-
-                try
-                {
-                    var seeder = services.GetRequiredService<IDataSeeding>();
-                    await seeder.SeedDataAsync();
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database.");
-                }
-            }
-          
-
- 
-
-            app.UseCors("AllowAll");
-
-            // ---------------------------------------------------------
-            // 6) Configure HTTP Pipeline
-            // ---------------------------------------------------------
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseAuthorization();
-            app.MapControllers();
-
-            await app.RunAsync();
-        }
-    }
+using (var scope = app.Services.CreateScope())
+{
+    var seeder = scope.ServiceProvider.GetRequiredService<IDataSeeding>();
+    await seeder.SeedDataAsync();
 }
+#region Middleware pipeline
+
+// Swagger
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// HTTPS
+app.UseHttpsRedirection();
+
+// CORS
+app.UseCors("AllowFlutter");
+
+// Authorization (حتى لو مش مستخدم Auth)
+app.UseAuthorization();
+
+// Controllers
+app.MapControllers();
+
+#endregion
+
+app.Run();

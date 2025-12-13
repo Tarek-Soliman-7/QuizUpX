@@ -9,13 +9,9 @@ namespace Domain.Contracts
 {
     public interface IAttemptRepository
     {
-        Task<Attempt?> GetByIdAsync(int id);
-        Task<IReadOnlyList<Attempt>> GetByUserIdAsync(string userId, int? take = null, int? skip = null);
-        Task<IReadOnlyList<Attempt>> GetBySubjectIdAsync(int subjectId);
-        Task AddAsync(Attempt attempt);
-        void Delete(Attempt attempt);
-        void UpdateAsync(Attempt attempt);
-        Task<int> CountAsync(string? userId = null, int? subjectId = null);
-        Task<IReadOnlyList<Attempt>> ListAsync(string? userId = null, int? subjectId = null, int skip = 0, int take = 50);
+        Task<Attempt> AddAsync(Attempt attempt);
+        Task<Attempt?> GetByStudentAndSubjectAsync(int studentId, int subjectId);
+        Task<Attempt?> GetByIdWithAnswersAsync(int attemptId);
     }
+
 }

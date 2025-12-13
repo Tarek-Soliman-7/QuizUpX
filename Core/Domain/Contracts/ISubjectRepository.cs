@@ -2,8 +2,10 @@
 
 namespace Domain.Contracts
 {
-    public interface ISubjectRepository : IRepository<Subject>
+    public interface ISubjectRepository
     {
-        Task<Subject?> GetByNameAsync(string name);
+        Task<List<Subject>> GetAllAsync();
+        Task<Subject?> GetByIdAsync(int id);
     }
+
 }

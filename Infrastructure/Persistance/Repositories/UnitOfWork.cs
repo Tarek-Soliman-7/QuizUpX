@@ -10,6 +10,7 @@ namespace Persistance.UnitOfWork
         private SubjectRepository? _subjectRepository;
         private QuestionRepository? _questionRepository;
         private AttemptRepository? _attemptRepository;
+        private AttemptAnswerRepository? _attemptAnswerRepository;
         private StudentRepository? _studentRepository;
 
 
@@ -26,6 +27,8 @@ namespace Persistance.UnitOfWork
 
         public IStudentRepository Students => _studentRepository ??= new StudentRepository(_context);
 
-        public Task<int> CommitAsync() => _context.SaveChangesAsync();
+        public IAttemptAnswerRepository AttemptAnswers => _attemptAnswerRepository ??= new AttemptAnswerRepository(_context);
+
+        public Task<int> CompleteAsync() => _context.SaveChangesAsync();
     }
 }

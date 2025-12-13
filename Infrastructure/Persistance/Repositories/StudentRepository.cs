@@ -7,28 +7,24 @@ namespace Persistance.Repositories
 {
     public class StudentRepository : IStudentRepository
     {
-        private readonly AppDbContext _db;
+        private readonly AppDbContext _context;
 
-        public StudentRepository(AppDbContext db)
+        public StudentRepository(AppDbContext context)
         {
-            _db = db;
+            _context = context;
         }
 
         public async Task<Student?> GetByUniversityCodeAsync(string code)
         {
-            return await _db.Students
+            return await _context.Students
                 .FirstOrDefaultAsync(s => s.UniversityCode == code);
         }
 
-        public async Task AddAsync(Student student)
+        public async Task<Student?> GetByIdAsync(int id)
         {
-            await _db.Students.AddAsync(student);
-        }
-
-        public Task UpdateAsync(Student student)
-        {
-            _db.Students.Update(student);
-            return Task.CompletedTask;
+            return await _context.Students
+                .FirstOrDefaultAsync(s => s.Id == id);
         }
     }
+
 }

@@ -15,18 +15,17 @@ namespace Persistance.Data.Configurations
         {
             builder.ToTable("Subjects");
 
-            builder.HasKey(s => s.id);
 
-            builder.Property(s => s.name)
+            builder.Property(s => s.Name)
                 .IsRequired()
                 .HasMaxLength(200);
 
-            builder.Property(s => s.description)
+            builder.Property(s => s.Description)
                 .HasMaxLength(1000);
 
             builder.HasMany(s => s.Questions)
                    .WithOne(q => q.Subject)
-                   .HasForeignKey(q => q.subjectId)
+                   .HasForeignKey(q => q.SubjectId)
                    .OnDelete(DeleteBehavior.Cascade);
         }
     }

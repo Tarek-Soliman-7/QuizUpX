@@ -5,17 +5,28 @@ using Persistance.Data;
 
 namespace Persistance.Repositories
 {
-    public class QuestionRepository : Repository<Question>, IQuestionRepository
+    public class QuestionRepository : IQuestionRepository
     {
-        public QuestionRepository(AppDbContext context) : base(context) { }
+        private readonly AppDbContext _context;
 
-
-        public async Task<IEnumerable<Question>> GetBySubjectAsync(int subjectId)
+        public QuestionRepository(AppDbContext context)
         {
-            return await _dbSet
-            .Where(q => q.subjectId == subjectId)
-            .AsNoTracking()
-            .ToListAsync();
+            _context = context;
+        }
+
+        public async Task<List<Question>> GetBySubjectIdAsync(int subjectId)
+        {
+            return await _context.Questions
+                .Where(q => q.SubjectId == subjectId)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<Question?> GetByIdAsync(int id)
+        {
+            return await _context.Questions
+                .FirstOrDefaultAsync(q => q.Id == id);
         }
     }
+
 }

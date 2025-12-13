@@ -1,23 +1,25 @@
-﻿using Domain.Entities;
-using Domain.Contracts;
+﻿using Domain.Contracts;
+using Domain.Entities;
+using Domain.Entities.IdentityModule;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
 using Persistance.Data;
+using Shared.Dtos;
+using System.Text.Json;
 
-namespace Presistence.Data
+namespace Persistance.Data
 {
     public class DataSeeding : IDataSeeding
     {
         private readonly AppDbContext _dbContext;
         private readonly ILogger<DataSeeding> _logger;
         private readonly IWebHostEnvironment _env;
+
+        private readonly JsonSerializerOptions _jsonOptions = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
 
         public DataSeeding(
             AppDbContext dbContext,
@@ -33,59 +35,121 @@ namespace Presistence.Data
         {
             try
             {
-                var pendingMigrations = await _dbContext.Database.GetPendingMigrationsAsync();
-                if (pendingMigrations.Any())
+                // Apply pending migrations
+                if ((await _dbContext.Database.GetPendingMigrationsAsync()).Any())
                     await _dbContext.Database.MigrateAsync();
 
-                // Seed Subjects first
-                if (!_dbContext.Subjects.Any())
-                {
-                    await using var subjectData = File.OpenRead("..\\Infrastructure\\Persistance\\Data\\DataSeed\\Subjects.json");
-                    var subjects = await JsonSerializer.DeserializeAsync<List<Subject>>(subjectData);
-                    if (subjects is not null && subjects.Any())
-                    {
-                        // ensure ids are zero so DB will generate them
-                        foreach (var s in subjects) s.id = 0;
-                        await _dbContext.Subjects.AddRangeAsync(subjects);
-                        await _dbContext.SaveChangesAsync(); // <-- save now to generate Subject IDs
-                    }
-                }
+                // =========================================
+                // ROOT PATH FIX (important part)
+                // =========================================
+                var seedPath = Path.GetFullPath(
+                    Path.Combine(
+                        _env.ContentRootPath,
+                        "..",
+                        "Infrastructure",
+                        "Persistance",
+                        "Data",
+                        "DataSeed"
+                    )
+                );
 
-                // Then seed Questions
-                if (!_dbContext.Questions.Any())
+                // =============================
+                // 1️⃣ Seed Students
+                // =============================
+                if (!await _dbContext.Students.AnyAsync())
                 {
-                    await using var questionData = File.OpenRead("..\\Infrastructure\\Persistance\\Data\\DataSeed\\Questions.json");
-                    var questions = await JsonSerializer.DeserializeAsync<List<Question>>(questionData);
-                    if (questions is not null && questions.Any())
+                    var studentsPath = Path.Combine(seedPath, "students.json");
+
+                    await using var studentData = File.OpenRead(studentsPath);
+                    var studentsSeed =
+                        await JsonSerializer.DeserializeAsync<List<StudentSeedModel>>(studentData, _jsonOptions);
+
+                    if (studentsSeed is not null && studentsSeed.Any())
                     {
-                        // if questions JSON used subject names instead of ids, map them:
-                        // Example: if question JSON has subjectName property you can lookup by name.
-                        // But if JSON has subjectId referring to old ids, we need to remap:
-                        foreach (var q in questions)
+                        var students = studentsSeed.Select(s => new Student
                         {
-                            q.id = 0; // let DB generate question id
+                            Id = 0,
+                            Name = s.Name,
+                            UniversityCode = s.UniversityCode,
+                            Pin = s.Pin,
+                            IsActive = true
+                        }).ToList();
 
-                            // REMAP subjectId (if original subjectId is present but DB generated different ids)
-                            // Best approach: match by a unique field (e.g., subject name). 
-                            // If your question JSON contains subjectName, do:
-                            // var subj = _dbContext.Subjects.FirstOrDefault(s => s.Name == q.SomeSubjectName);
-                            // q.subjectId = subj?.id ?? q.subjectId;
-
-                            // If JSON only has subjectId that matched old ids, you need mapping data to translate old->new ids.
-                        }
-
-                        await _dbContext.Questions.AddRangeAsync(questions);
+                        await _dbContext.Students.AddRangeAsync(students);
                         await _dbContext.SaveChangesAsync();
                     }
                 }
+
+                // =============================
+                // 2️⃣ Seed Subjects
+                // =============================
+                if (!await _dbContext.Subjects.AnyAsync())
+                {
+                    var subjectsPath = Path.Combine(seedPath, "Subjects.json");
+
+                    await using var subjectData = File.OpenRead(subjectsPath);
+                    var subjects =
+                        await JsonSerializer.DeserializeAsync<List<Subject>>(subjectData, _jsonOptions);
+
+                    if (subjects is not null && subjects.Any())
+                    {
+                        foreach (var s in subjects)
+                            s.Id = 0;
+
+                        await _dbContext.Subjects.AddRangeAsync(subjects);
+                        await _dbContext.SaveChangesAsync();
+                    }
+                }
+
+                // =============================
+                // 3️⃣ Seed Questions
+                // =============================
+                if (!await _dbContext.Questions.AnyAsync())
+                {
+                    var questionsPath = Path.Combine(seedPath, "Questions.json");
+
+                    await using var questionData = File.OpenRead(questionsPath);
+                    var questionsSeed =
+                        await JsonSerializer.DeserializeAsync<List<Question>>(questionData, _jsonOptions);
+
+                    if (questionsSeed is not null && questionsSeed.Any())
+                    {
+                        foreach (var q in questionsSeed)
+                        {
+                            // reset identity
+                            q.Id = 0;
+
+                            // safety check (important)
+                            if (q.Choices == null)
+                                q.Choices = new List<string>();
+
+                            // OPTIONAL: validate subjectId exists
+                            var subjectExists = await _dbContext.Subjects
+                                .AnyAsync(s => s.Id == q.SubjectId);
+
+                            if (!subjectExists)
+                            {
+                                _logger.LogWarning(
+                                    $"Question '{q.Title}' skipped. SubjectId '{q.SubjectId}' not found."
+                                );
+                                continue;
+                            }
+                        }
+
+                        await _dbContext.Questions.AddRangeAsync(questionsSeed);
+                        await _dbContext.SaveChangesAsync();
+                    }
+
+
+
+                }
             }
+            
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error while seeding data");
                 throw;
             }
         }
-
-        public Task SeedIdentityDataAsync() => Task.CompletedTask;
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos
 {
-    public class IssuePinDto
+    public class SubmitAnswerDto
     {
-        public string Pin { get; set; } = null!;
+        public int QuestionId { get; set; }
+        public int SelectedIndex { get; set; }
     }
 }

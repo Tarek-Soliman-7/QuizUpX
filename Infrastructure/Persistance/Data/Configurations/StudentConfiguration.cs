@@ -18,6 +18,10 @@ namespace Persistance.Data.Configurations
             builder.Property(s => s.UniversityCode)
                    .IsRequired()
                    .HasMaxLength(50);
+            builder.Property(s => s.Pin)
+                   .IsRequired()
+                   .HasMaxLength(10);
+
 
             builder.HasIndex(s => s.UniversityCode)
                    .IsUnique();
@@ -25,8 +29,14 @@ namespace Persistance.Data.Configurations
             builder.Property(s => s.IsActive)
                    .HasDefaultValue(true);
 
-            builder.Property(s => s.CreatedAt)
-                   .HasDefaultValueSql("GETUTCDATE()");
+            builder.HasMany(s => s.Attempts)
+                   .WithOne(a => a.Student)
+                   .HasForeignKey(a => a.StudentId)
+                   .OnDelete(DeleteBehavior.Restrict);
+
+
+
+
         }
     }
 

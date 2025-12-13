@@ -1,6 +1,4 @@
-﻿using Application.Contracts;
-using Core.Services;
-using Domain.Contracts;
+﻿using Domain.Contracts;
 using Persistance.Repositories;
 using Persistance.UnitOfWork;
 using Services.Abstraction.Contracts;
@@ -17,13 +15,9 @@ namespace QuizUpX.API.Extentions
             services.AddScoped<IQuestionRepository,QuestionRepository>();
             services.AddScoped<ISubjectRepository,SubjectRepository>();
             services.AddScoped<IAttemptRepository, AttemptRepository>();
-            services.AddScoped<IQuestionService, QuestionService>();
-            services.AddScoped<ISubjectService, SubjectService>();
-            services.AddScoped<IAttemptService, AttemptService>();
             services.AddScoped<IStudentRepository, StudentRepository>();
 
-            services.AddScoped<IStudentService, StudentService>();
-            services.AddScoped<IExamService, ExamService>();
+            services.AddScoped<IQuizService, QuizService>();
 
 
 

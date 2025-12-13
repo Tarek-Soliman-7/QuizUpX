@@ -1,0 +1,22 @@
+[
+  { "name": "Ahmed Eid", "universityCode": "SVNU001", "pin": "1001" },
+  { "name": "Mohamed Salah", "universityCode": "SVNU002", "pin": "1002" },
+  { "name": "Omar Gad", "universityCode": "SVNU003", "pin": "1003" },
+  { "name": "Ziad Amr", "universityCode": "SVNU004", "pin": "1004" },
+  { "name": "Tarek Soliman", "universityCode": "SVNU005", "pin": "1005" },
+  { "name": "Abdallah Ebrahim", "universityCode": "SVNU006", "pin": "1006" },
+  { "name": "Abdelrahman Alaa", "universityCode": "SVNU007", "pin": "1007" },
+  { "name": "Hamza Mohammed", "universityCode": "SVNU008", "pin": "1008" },
+  { "name": "Hateem Mohammed", "universityCode": "SVNU009", "pin": "1009" },
+  { "name": "Mohamed Adel", "universityCode": "SVNU010", "pin": "1010" },
+  { "name": "Karim Nabil", "universityCode": "SVNU011", "pin": "1011" },
+  { "name": "Sherif Ayman", "universityCode": "SVNU012", "pin": "1012" },
+  { "name": "Ali Reda", "universityCode": "SVNU013", "pin": "1013" },
+  { "name": "Hany Abdelrahman", "universityCode": "SVNU014", "pin": "1014" },
+  { "name": "Tamer Salah", "universityCode": "SVNU015", "pin": "1015" },
+  { "name": "Ehab Gamal", "universityCode": "SVNU016", "pin": "1016" },
+  { "name": "Wael Emad", "universityCode": "SVNU017", "pin": "1017" },
+  { "name": "Nour ElDin Ahmed", "universityCode": "SVNU018", "pin": "1018" },
+  { "name": "Bassem Fathy", "universityCode": "SVNU019", "pin": "1019" },
+  { "name": "Adel Mostafa", "universityCode": "SVNU020", "pin": "1020" }
+]

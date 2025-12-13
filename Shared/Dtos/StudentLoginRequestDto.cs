@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos
 {
-    public class CreateStudentDto
+    public class StudentLoginRequestDto
     {
-        public string UniversityCode { get; set; } = null!;
-        public string FullName { get; set; } = null!;
+        public string StudentCode { get; set; } = null!;
         public string Pin { get; set; } = null!;
+        public int SubjectId { get; set; }
     }
 }

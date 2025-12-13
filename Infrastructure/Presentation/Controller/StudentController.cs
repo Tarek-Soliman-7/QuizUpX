@@ -10,49 +10,35 @@ using System.Threading.Tasks;
 namespace Presentation.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/students")]
     public class StudentController : ControllerBase
     {
-        private readonly IStudentService _studentService;
+        private readonly IQuizService _quizService;
 
-        public StudentController(IStudentService studentService)
+        public StudentController(IQuizService quizService)
         {
-            _studentService = studentService;
+            _quizService = quizService;
         }
 
-        [HttpPost("verify-pin")]
-        public async Task<IActionResult> VerifyPin([FromBody] VerifyPinRequest req)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] StudentLoginRequestDto dto)
         {
-            var ok = await _studentService.VerifyPinAsync(req.UniversityCode, req.Pin);
+            if (!ModelState.IsValid)
+                return BadRequest("Invalid request data");
 
-            if (!ok)
-                return Unauthorized();
-
-            return Ok(new { message = "PIN accepted" });
-        }
-
-        [HttpPost("create")]
-        public async Task<IActionResult> CreateStudent([FromBody] CreateStudentDto dto)
-        {
             try
             {
-                var student = await _studentService.CreateStudentAsync(
-                    dto.UniversityCode,
-                    dto.FullName,
-                    dto.Pin
-                );
+                var result = await _quizService.LoginAsync(dto);
 
-                return Ok(new
-                {
-                    message = "Student created successfully.",
-                    studentId = student.Id
-                });
+                if (!result.Success)
+                    return Unauthorized();
+
+                return Ok(result);
             }
-            catch (InvalidOperationException ex)
+            catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return StatusCode(500, "An unexpected error occurred");
             }
         }
-
     }
 }

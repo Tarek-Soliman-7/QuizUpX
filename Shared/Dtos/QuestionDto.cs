@@ -1,22 +1,11 @@
 ﻿namespace Shared.Dtos
 {
-    public record QuestionDto
+    public class QuestionDto
     {
-        public int id { get; set; }
-
-        public int subjectId { get; set; }
-
-
-        public string title { get; set; } = string.Empty;
-
-        public List<string> choices { get; set; } = new();
-
-        public int correctIndex { get; set; }
-
-        public int mark { get; set; } = 1;
-
-        public bool questionType { get; set; } = false;
-
-        public SubjectDto? Subject { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; } = null!;
+        public List<string> Choices { get; set; } = new();
+        public int CorrectIndex { get; set; }
+        public int Mark { get; set; }
     }
 }

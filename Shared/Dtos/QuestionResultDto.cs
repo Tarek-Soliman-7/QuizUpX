@@ -2,9 +2,9 @@
 {
     public class QuestionResultDto
     {
-        public int id { get; set; }
-        public bool isCorrect { get; set; }
-        public int mark { get; set; }
-        public int correctIndex { get; set; } // include only in review endpoints
+        public string Question { get; set; } = null!;
+        public string CorrectAnswer { get; set; } = null!;
+        public string StudentAnswer { get; set; } = null!;
+        public bool IsCorrect { get; set; }
     }
 }

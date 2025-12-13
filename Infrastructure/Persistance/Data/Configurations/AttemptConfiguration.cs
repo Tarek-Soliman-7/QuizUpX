@@ -1,6 +1,8 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Shared.Enums;
+using System.Reflection.Emit;
 
 namespace Persistance.Data.Configurations
 {
@@ -11,13 +13,12 @@ namespace Persistance.Data.Configurations
             builder.ToTable("Attempts");
             builder.HasKey(e => e.Id);
 
-            builder.Property(e => e.AnswersJson)
-                .IsRequired()
-                   .HasColumnType("nvarchar(max)");
+            
 
             builder.Property(e => e.Status)
                    .HasMaxLength(50)
-                   .HasDefaultValue("Submitted");
+                   .HasConversion<string>()
+                   .HasDefaultValue(AttemptStatus.Submitted);
 
             // FK to Subject
             builder.HasOne(e => e.Subject)
@@ -25,16 +26,19 @@ namespace Persistance.Data.Configurations
                    .HasForeignKey(e => e.SubjectId)
                    .OnDelete(DeleteBehavior.Cascade);
 
-            // If you have ApplicationUser navigation, configure it here. If not, leave UserId as string.
-            // Example (uncomment & adjust if you have ApplicationUser):
-            // builder.HasOne<Domain.Identity.ApplicationUser>()
-            //        .WithMany()
-            //        .HasForeignKey(e => e.UserId)
-            //        .OnDelete(DeleteBehavior.SetNull);
+            builder.HasMany(a => a.Answers)
+                   .WithOne(aa => aa.Attempt)
+                   .HasForeignKey(aa => aa.AttemptId)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+
+            builder.HasOne(a => a.Student)
+                   .WithMany(s => s.Attempts)
+                   .HasForeignKey(a => a.StudentId);
 
             // Indexes for fast queries
             builder.HasIndex(e => e.SubjectId);
-            builder.HasIndex(e => e.UserId);
+          
             builder.HasIndex(e => e.SubmittedAt);
         }
     }

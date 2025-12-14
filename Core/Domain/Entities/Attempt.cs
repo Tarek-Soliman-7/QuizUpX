@@ -15,7 +15,7 @@ namespace Domain.Entities
 
         public int TotalScore { get; set; }
         public int CorrectAnswers { get; set; }
-        public AttemptStatus Status { get; set; }   
+        public bool Status { get; set; } = false;
         public Student Student { get; set; } = null!;
         public Subject Subject { get; set; } = null!;
         public ICollection<AttemptAnswer> Answers { get; set; } = new List<AttemptAnswer>();

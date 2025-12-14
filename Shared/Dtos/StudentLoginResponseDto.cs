@@ -8,10 +8,10 @@ namespace Shared.Dtos
 {
     public class StudentLoginResponseDto
     {
-        public bool Success { get; set; }
-        public int? StudentId { get; set; }
-        public string? StudentName { get; set; }
-        public string Message { get; set; } = null!;
+        public bool success { get; set; }
+        public int? studentId { get; set; }
+        public string? studentName { get; set; }
+        public string? message { get; set; } = null!;
     }
 
 }

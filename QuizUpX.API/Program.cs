@@ -5,6 +5,7 @@ using Persistance.UnitOfWork;
 using Domain.Contracts;
 using Services.Abstraction.Contracts;
 using Services.Implementations;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,12 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.PropertyNamingPolicy =
+            JsonNamingPolicy.CamelCase;
+    });
 
 #endregion
 
@@ -79,7 +86,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // CORS
-app.UseCors("AllowFlutter");
+app.UseCors("AllowAll");
 
 // Authorization (حتى لو مش مستخدم Auth)
 app.UseAuthorization();

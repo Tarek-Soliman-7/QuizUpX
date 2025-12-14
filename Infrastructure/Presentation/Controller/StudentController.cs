@@ -30,7 +30,7 @@ namespace Presentation.Controller
             {
                 var result = await _quizService.LoginAsync(dto);
 
-                if (!result.Success)
+                if (!result.success)
                     return Unauthorized();
 
                 return Ok(result);

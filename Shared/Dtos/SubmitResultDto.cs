@@ -2,8 +2,8 @@
 {
     public class SubmitResultDto
     {
-        public int TotalScore { get; set; }
-        public int CorrectAnswers { get; set; }
-        public int IncorrectAnswers { get; set; }
+        public int totalScore { get; set; }
+        public int correctAnswers { get; set; }
+        public int incorrectAnswers { get; set; }
     }
 }

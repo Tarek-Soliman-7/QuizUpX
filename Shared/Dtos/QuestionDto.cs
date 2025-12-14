@@ -2,10 +2,10 @@
 {
     public class QuestionDto
     {
-        public int Id { get; set; }
-        public string Title { get; set; } = null!;
-        public List<string> Choices { get; set; } = new();
-        public int CorrectIndex { get; set; }
-        public int Mark { get; set; }
+        public int questionId { get; set; }
+        public string title { get; set; } = null!;
+        public List<string> choices { get; set; } = new();
+        public int correctIndex { get; set; }
+        public int mark { get; set; }
     }
 }

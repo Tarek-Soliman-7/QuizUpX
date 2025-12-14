@@ -8,6 +8,7 @@ namespace Services.Abstraction.Contracts
         Task<List<QuestionDto>> GetQuestionsAsync(int subjectId);
         Task<SubmitResultDto> SubmitQuizAsync(SubmitQuizDto dto);
         Task<List<QuestionResultDto>> GetReviewAsync(int attemptId);
+        Task<List<SubjectDto>> GetAllSubjectAsync();
     }
 
 }

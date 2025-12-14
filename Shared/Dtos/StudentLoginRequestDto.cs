@@ -8,8 +8,8 @@ namespace Shared.Dtos
 {
     public class StudentLoginRequestDto
     {
-        public string StudentCode { get; set; } = null!;
-        public string Pin { get; set; } = null!;
-        public int SubjectId { get; set; }
+        public string universityCode { get; set; } = null!;
+        public string pin { get; set; } = null!;
+        public int subjectId { get; set; }
     }
 }

@@ -16,9 +16,7 @@ namespace Persistance.Data.Configurations
             
 
             builder.Property(e => e.Status)
-                   .HasMaxLength(50)
-                   .HasConversion<string>()
-                   .HasDefaultValue(AttemptStatus.Submitted);
+                   .HasDefaultValue(false);
 
             // FK to Subject
             builder.HasOne(e => e.Subject)

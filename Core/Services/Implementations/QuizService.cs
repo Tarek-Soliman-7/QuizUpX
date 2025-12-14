@@ -1,5 +1,6 @@
 ﻿using Domain.Contracts;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Services.Abstraction.Contracts;
 using Shared.Dtos;
@@ -10,6 +11,7 @@ namespace Services.Implementations
     public class QuizService : IQuizService
     {
         private readonly IStudentRepository _studentRepo;
+        private readonly ISubjectRepository _subjectRepository;
         private readonly IQuestionRepository _questionRepo;
         private readonly IAttemptRepository _attemptRepo;
         private readonly IAttemptAnswerRepository _attemptAnswerRepo;
@@ -32,23 +34,23 @@ namespace Services.Implementations
         public async Task<StudentLoginResponseDto> LoginAsync(StudentLoginRequestDto dto)
         {
             var student = await _studentRepo
-                .GetByUniversityCodeAsync(dto.StudentCode);
+                .GetByUniversityCodeAsync(dto.universityCode);
 
-            if (student == null || student.Pin != dto.Pin)
+            if (student == null || student.Pin != dto.pin)
             {
                 return new StudentLoginResponseDto
                 {
-                    Success = false,
-                    Message = "Invalid code or pin"
+                    success = false,
+                    message = "Invalid code or pin"
                 };
             }
 
             return new StudentLoginResponseDto
             {
-                Success = true,
-                StudentId = student.Id,
-                StudentName = student.Name,
-                Message = "Login successful"
+                success = true,
+                studentId = student.Id,
+                studentName = student.Name,
+                message = "Login successful"
             };
         }
 
@@ -59,25 +61,25 @@ namespace Services.Implementations
 
             return questions.Select(q => new QuestionDto
             {
-                Id = q.Id,
-                Title = q.Title,
-                Choices = q.Choices,
-                CorrectIndex = q.CorrectIndex, // مؤقتًا
-                Mark = q.Mark
+                questionId = q.Id,
+                title = q.Title,
+                choices = q.Choices,
+                correctIndex = q.CorrectIndex, // مؤقتًا
+                mark = q.Mark
             }).ToList();
         }
 
         public async Task<SubmitResultDto> SubmitQuizAsync(SubmitQuizDto dto)
         {
             var attempt = await _attemptRepo
-                .GetByStudentAndSubjectAsync(dto.StudentId, dto.SubjectId);
+                .GetByStudentAndSubjectAsync(dto.studentId, dto.subjectId);
 
             if (attempt == null)
             {
                 attempt = new Attempt
                 {
-                    StudentId = dto.StudentId,
-                    SubjectId = dto.SubjectId,
+                    StudentId = dto.studentId,
+                    SubjectId = dto.subjectId,
                     StartedAt = DateTime.UtcNow
                 };
 
@@ -88,12 +90,12 @@ namespace Services.Implementations
             int totalScore = 0;
             int correctAnswers = 0;
 
-            foreach (var ans in dto.Answers)
+            foreach (var ans in dto.answers)
             {
-                var question = await _questionRepo.GetByIdAsync(ans.QuestionId);
+                var question = await _questionRepo.GetByIdAsync(ans.questionId);
                 if (question == null) continue;
 
-                bool isCorrect = ans.SelectedIndex == question.CorrectIndex;
+                bool isCorrect = ans.selectedIndex == question.CorrectIndex;
 
                 if (isCorrect)
                 {
@@ -105,7 +107,7 @@ namespace Services.Implementations
                 {
                     AttemptId = attempt.Id,
                     QuestionId = question.Id,
-                    SelectedIndex = ans.SelectedIndex,
+                    SelectedIndex = ans.selectedIndex,
                     IsCorrect = isCorrect
                 };
 
@@ -120,9 +122,9 @@ namespace Services.Implementations
 
             return new SubmitResultDto
             {
-                TotalScore = totalScore,
-                CorrectAnswers = correctAnswers,
-                IncorrectAnswers = dto.Answers.Count - correctAnswers
+                totalScore = totalScore,
+                correctAnswers = correctAnswers,
+                incorrectAnswers = dto.answers.Count - correctAnswers
             };
         }
 
@@ -140,5 +142,16 @@ namespace Services.Implementations
             }).ToList();
         }
 
+        public async Task<List<SubjectDto>> GetAllSubjectAsync()
+        {
+            var subjects = await _unitOfWork.Subjects.GetAllAsync();
+
+            return subjects.Select(s => new SubjectDto
+            {
+                id = s.Id,
+                name = s.Name,
+                description = s.Description
+            }).ToList();
+        }
     }
 }

@@ -8,9 +8,9 @@ namespace Shared.Dtos
 {
     public class SubmitQuizDto
     {
-        public int StudentId { get; set; }
-        public int SubjectId { get; set; }
-        public List<SubmitAnswerDto> Answers { get; set; } = new();
+        public int studentId { get; set; }
+        public int subjectId { get; set; }
+        public List<SubmitAnswerDto> answers { get; set; } = new();
     }
 
 }

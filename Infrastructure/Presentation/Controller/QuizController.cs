@@ -54,6 +54,13 @@ namespace Presentation.Controller
                 return StatusCode(500, "Failed to load review");
             }
         }
+        [HttpGet("subjects")]
+        public async Task<IActionResult> Subjects()
+        {
+            var subjects = await _quizService.GetAllSubjectAsync();
+            return Ok(subjects);
+        }
+
     }
 
 }

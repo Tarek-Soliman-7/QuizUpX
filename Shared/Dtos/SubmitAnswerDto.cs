@@ -8,7 +8,7 @@ namespace Shared.Dtos
 {
     public class SubmitAnswerDto
     {
-        public int QuestionId { get; set; }
-        public int SelectedIndex { get; set; }
+        public int questionId { get; set; }
+        public int selectedIndex { get; set; }
     }
 }

@@ -11,7 +11,6 @@ namespace Services.Implementations
     public class QuizService : IQuizService
     {
         private readonly IStudentRepository _studentRepo;
-        private readonly ISubjectRepository _subjectRepository;
         private readonly IQuestionRepository _questionRepo;
         private readonly IAttemptRepository _attemptRepo;
         private readonly IAttemptAnswerRepository _attemptAnswerRepo;

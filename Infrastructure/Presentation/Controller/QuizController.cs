@@ -31,9 +31,9 @@ namespace Presentation.Controller
                 var result = await _quizService.SubmitQuizAsync(dto);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex )
             {
-                return StatusCode(500, "Failed to submit quiz");
+                return StatusCode(500, ex.Message);
             }
         }
 

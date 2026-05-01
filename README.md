@@ -27,11 +27,10 @@ It provides endpoints that allow students to select a subject, log in using a un
 - Entity Framework Core
 - SQL Server
 - Repository Pattern + Unit of Work
-- DTO Mapping
+- DTOs
 - Async / Await
 - JSON Serialization
 
 ---
 
-## 📁 Project Structure
 

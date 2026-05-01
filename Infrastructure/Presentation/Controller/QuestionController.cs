@@ -1,8 +1,5 @@
-﻿using Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using Services.Abstraction.Contracts;
-using Shared.Dtos;
 
 namespace Presentation.Controller
 {
